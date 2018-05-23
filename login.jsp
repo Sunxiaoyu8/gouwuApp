@@ -13,7 +13,7 @@
         if (form.passwd.value == "") {   
            alert("密码不能为空!");       
        form.passwd.focus();  
-            return false;          } 
+            return  false;          } 
          return true;
          
                }
