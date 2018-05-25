@@ -1,3 +1,5 @@
+书籍条目信息
+
 public class BookItem {  
     private Book book;//购买的书  
     private int totalcount;//商品数量  

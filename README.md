@@ -3,13 +3,15 @@
 实现购物过程
 
 
-1.首先定义模型
+1.首先定义模型1Class.jsp
+
 
 private int totalCount;//总的购书数量
 private float totalPrice；//总价
 private BOOK book;
 private int count;//数量
 public book.getPrice(){}//小计
+
 
 2.分析交互页面
 add()
@@ -29,3 +31,25 @@ clear()
 //清空购物车
      public void clear(Cart cart);
 
+public CartItem(Book book, int count) {
+           super();
+           this.book = book;
+           this.count = count;
+     }
+
+
+
+public Book getBook() {
+           return book ;
+     }
+
+
+public int getCount() {
+           return count ;
+     }
+     
+     
+      // 得到小计
+public float getItemPrice() {
+ return book .getPrice() * count;
+     }
