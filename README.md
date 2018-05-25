@@ -29,3 +29,25 @@ clear()
 //清空购物车
      public void clear(Cart cart);
 
+public CartItem(Book book, int count) {
+           super();
+           this.book = book;
+           this.count = count;
+     }
+
+
+
+public Book getBook() {
+           return book ;
+     }
+
+
+public int getCount() {
+           return count ;
+     }
+     
+     
+      // 得到小计
+public float getItemPrice() {
+ return book .getPrice() * count;
+     }
