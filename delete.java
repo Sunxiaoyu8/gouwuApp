@@ -1,7 +1,7 @@
 
     public class ShoppingCart {
     private Map<Integer,BookItem> map=new LinkedHashMap<Integer,BooktItem>();  
-    public void addBook(Book b){//添加商品  
+    public void addBook(Book b){//添加书籍  
         int BookId=p.getBookId();  
         if(map.containsKey(BookId)){  
             BookItem BookItem=map.get(bookId);  
@@ -16,12 +16,12 @@
         while(iterator.hasNext()){  
             BookItem bookItem = iterator.next();  
             Book book =  bookItem.getProduct();  
-            System.out.println("商品编号："+book.getProductId()+",商品名称："  
+            System.out.println("书籍编号："+book.getProductId()+",书籍名称："  
             +book.getBookName()+",单价："+book.getPrice()+",数量："+BookItem.getCount()  
             +",小计："+bookItem.totalMoney());  
         }  
     }  
-    public boolean deleteBookt(int bookId){//删除商品  
+    public boolean deleteBookt(int bookId){//删除书籍  
         if(map.containsKey(bookId)){  
             map.remove(bookId);  
             return true;  
@@ -34,7 +34,7 @@
                 BookItem bookItem = map.get(bookId);  
                 bookItem.setCount(count);  
                 return true;  
-            }else if(count==0){//删除该商品  
+            }else if(count==0){//删除该书籍  
                 deleteBook(bookId);  
                 return true;  
             }     
