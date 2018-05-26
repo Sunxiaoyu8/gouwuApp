@@ -53,3 +53,13 @@ public int getCount() {
 public float getItemPrice() {
  return book .getPrice() * count;
      }
+
+
+text.java内容，测试购物车
+gouwuCart cart=new gouwuCart();  
+        Book p1=new Book(101,"计算机网络书","学生书籍",45);  
+        Book p2=new Book(102,"操作系统","学生书籍",79);  
+        Book p3=new Book(103,"围城","小说书",25);  
+        Book p4=new Book(104,"爱的教育","小说书",20);  
+        Book p5=new Book(105,"机械修理","工具书",30);  
+        Book p6=new Book(101,"计算机网络书","学生书籍",45); //测试买两件书籍的情况 
