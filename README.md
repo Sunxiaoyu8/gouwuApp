@@ -63,3 +63,15 @@ gouwuCart cart=new gouwuCart();
         Book p4=new Book(104,"爱的教育","小说书",20);  
         Book p5=new Book(105,"机械修理","工具书",30);  
         Book p6=new Book(101,"计算机网络书","学生书籍",45); //测试买两件书籍的情况 
+      
+      
+   booklist.html
+        进入我的购物车之后有两种可能：购物车中有书、没有书
+        
+   没有书：则显示没有书并跳转到购书页面（需要经过BookClientServlet）
+     <c:when test="${empty CART || empty CART.map}">
+     购物车中没有一本书, 立即去 <a href="client/BookClientServlet?method=getPageInCondition" >购物 </a>                
+   </c:when>
+        
+        
+        
