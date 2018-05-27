@@ -1,0 +1,47 @@
+<body>  
+    <center>  
+              
+        <h2>我的购物车</h2>  
+          
+            <c:choose>  
+                <c:when test="${empty CART || empty CART.map}">  
+                    购物车中没有一本书, 立即去<a href="client/BookClientServlet?method=getPageInCondition">购物</a>                 
+                </c:when>  
+                <c:otherwise>  
+                    <table border="1" cellpadding="10" cellspacing="0">  
+                        <tr>  
+                            <td>书名</td>  
+                            <td>单价</td>  
+                            <td>数量</td>  
+                            <td>小计</td>  
+                            <td>操作</td>  
+                        </tr>  
+                        <!-- (bookid, CartItem) -->  
+                        <c:forEach items="${CART.map}" var="entry">  
+                            <tr>  
+                                <td>${entry.value.book.bookName}</td>  
+                                <td>${entry.value.book.price}</td>  
+                                <td>  
+                                    <button class="decrease" ${entry.value.count<=1 ? 'disabled="false"' : ''}>-</button>  
+                                    <input id="${entry.key}" class="count" type="text" value="${entry.value.count}" style="width: 30px;"/>  
+                                    <button class="increase">+</button>  
+                                </td>  
+                                <td>${entry.value.itemPrice}</td>  
+                                <td><a class="delete" href="client/CartServlet?method=delete&bookid=${entry.key}">删除</a></td>  
+                            </tr>                       
+                        </c:forEach>  
+                          
+              
+                        <tr>  
+                            <td><a id="clear" href="client/CartServlet?method=clear" >清空购物车</a></td>  
+                            <td><a  
+                                href="client/BookClientServlet?method=getPageInCondition">继续购物</a></td>  
+                            <td>共${CART.totalCount}本书</td>  
+                            <td>总价:${CART.totalPrice}元</td>  
+                            <td><a href="#">去结算</a></td>  
+                        </tr>  
+                    </table>  
+                </c:otherwise>  
+            </c:choose>  
+    </center>  
+</body>  
