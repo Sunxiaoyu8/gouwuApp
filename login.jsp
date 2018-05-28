@@ -2,7 +2,7 @@
  <html> 
  <head lang="en"> 
 	 <meta charset="UTF-8">
-	  <title>登陆</title>
+	  <title>欢迎登陆孙小雨书屋</title>
 	  <link rel="stylesheet" href="css/login.css">
 	  <script type="text/javascript">
 	      function checkForm(form) {  
