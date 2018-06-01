@@ -28,14 +28,20 @@
  			 <!--  登录面板    -->             
  			 <div class="panel">               
  				     <!--  账号和密码组    -->  
- 				                <div class="group">                      <label>账号</label>
+ 				                <div class="group">                 
+ 					     <label>账号</label>
 
- 			      <input placeholder="请输入账号" type="text"                          name="name">                    </div> 
+ 			      <input placeholder="请输入账号" type="text"     name="name">                    </div> 
  			                      <div class="group">                    <label>密码</label> <input placeholder="请输入密码" type="password"                          name="passwd">                  </div>          
  			            <div class="group">                    
- 			     	  <label>保存时间</label> <select name="savetime">                     <option value="7">一周</option>                  <option value="30">一个月</option>                      </select>        
+ 			     	  <label>保存时间</label> <select name="savetime">                 
+ 			     		    <option value="7">一周</option>               
+ 			     		   <option value="30">一个月</option>           
+ 			     	           </select>        
  			               </div>              
- 			         <!--  登录按钮    -->                  <div class="login">                 
+ 			         <!--  登录按钮    -->                 
+ 			      <div class="login">                 
+ 			     	
  			     	     <button type="submit">登录</button>               
  			        </div>             
  			  </div>               
