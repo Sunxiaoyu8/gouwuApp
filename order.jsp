@@ -23,7 +23,13 @@
 	   		for(int i=0;i<al.size();i++) {
 	   			BookBean book =(BookBean)al.get(i);	
 	   	%>
-	   	
+	   	<tr>
+	   	<td><%=book.getId() %></td>	
+	   	<td><%=book.getName() %></td>
+	   	<td><%=book.getPrice() %>元</td>
+	   	<td><%=book.getPublishHouse() %></td>
+    	<td><%=book.getBuynum() %>本</td>
+  	   	</tr>
 	   	<%
 	   		}
 	   	%>
