@@ -11,7 +11,7 @@
 
 
      <table border="1">
-	    	<tr><td>myname</td><td><input type="text" name="myname" /></td></tr>
+	    	<tr><td>用户名</td><td><input type="text" name="用户名" /></td></tr>
 	    	<tr><td>密码</td><td><input type="text" name="password" /></td></tr>
 	    	<tr><td><input type="submit" value="登录" /></td><td><input type="reset" value="清空重输" /></td></tr>
 	    </table>

@@ -2,20 +2,20 @@
 <html>  
 <head>  
 <meta http-equiv="Content-Type" content="text/html; charset=GBK">  
-<title>导购页面</title>  
+<title>购买页面</title>  
 </head>  
 <body>  
     <%   
        request.setCharacterEncoding("UTF-8");  
-       String id=request.getParameter("id");  
-       if(id==null){  
-           id="";  
+       String myname=request.getParameter("myname");  
+       if(myname==null){  
+           myname="";  
        }  
        else{  
-               session.setAttribute("id",id);  
+               session.setAttribute("myname",myname);  
        }  
        %>  
-       <a href="food.jsp">这里是柜台，请选择您要购买的书籍并支付购买</a><br/>  
-       <a href="loginID.jsp">欢迎修改支付卡号！</a>  
+       <a href="buybook.jsp">这里是购物界面，请选择您要购买的书籍并支付购买</a><br/>  
+       <a href="loginID.jsp">欢迎修改用户名！</a>  
 </body>  
 </html>  
