@@ -1,12 +1,64 @@
 
+  
 <html>  
+<body background="http://m.qpic.cn/psb?/V108ivHz388kZJ/Qqw4JawS*TxQLzJF7QTUV46ris5qT8cvkZ*wdhZ1zrU!/b/dA0BAAAAAAAA&bo=OASABwAAAAARB4s!&rf=viewer_4
+"></body></body>
 <head>  
 <meta http-equiv="Content-Type" content="text/html; charset=GBK">  
 <title>导购页面</title>  
+ <center> 
+
+<h2>我的购物车</h2>  
+          
+            <c:choose>  
+                <c:when test="${empty CART || empty CART.map}">  
+                    购物车中没有一本书, 立即去 <a href="buybook.html">购物</a>                 
+                </c:when>  
+                <c:otherwise>  
+
+                     <table border="1" cellpadding="10" cellspacing="0">   
+                    
+                        <tr>  
+                            <td>书名</td>  
+                            <td>单价</td>  
+                            <td>数量</td>  
+                            <td>小计</td>  
+                            <td>操作</td>  
+                        </tr>  
+                         
+        <c:forEach items="${CART.map}" var="entry">  
+                            <tr>  
+                                <td></td>  
+                                <td></td>  
+                                <td>  
+                                    <button class="decrease" ${entry.value.count<=1 ? 'disabled="false"' : ''}>-</button>  
+                                    <input id="${entry.key}" class="count" type="text" value="" style="width: 30px;"/>  
+                                    <button class="increase">+</button>  
+                                </td>  
+                                <td></td>  
+                                <td><input type="reset" value="删除" /></td> 
+                            </tr>                       
+                        </c:forEach>  
+                          
+              
+                        <tr>  
+                            <td><input type="reset" value="清空购物车" /></td>  
+                            <td><a  
+                                href="buybook.html">继续购物</a></td>  
+                            <td>共( )本书</td>  
+                            <td>总价:     元</td>  
+                            <td><a href="count.html">去结算</a></td>  
+                        </tr>  
+                    </table>  
+                </c:otherwise>  
+            </c:choose>  
+ </center> 
+
+
 </head>  
 <body>  
     
        <a href="buybook.html">这里是柜台，请选择您要购买的书籍并支付购买</a><br/>  
-       <a href="loginID.html">欢迎修改支付卡号！</a>  
+       <a href="loginID.html">欢迎修改用户名！</a>  
 </body>  
 </html>  
