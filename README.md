@@ -1,23 +1,31 @@
 # gouwuApp
-第一天
+
 实现购物过程
 
+1.首先我们需要设计一个登陆界面
+第一部分     我们从网上选取一个背景图片
+            复制其地址链接使用 <body background=""></body>语言，这样打开登录界面的时候背景图就出现了
+            之后我们需要设置登录名和密码
+第二部分     整体样式
+            登录标题的样式
+            用户名和密码的输入框和我们可以给用户名和密码设计一些属性
 
-1.首先定义模型1Class.jsp
+第三部分      用户名和密码的输入框，长宽高边框设置
+第四部分      登录按钮以及清空重输的设置
 
-
+2.设计一个导购界面
+第一部分       我们从网上选取一个背景图片（同上）
+第二部分       查看购物车判断有无书籍，没有商品调转到buybook.html界面去购买书籍
+                       有书籍，想要继续购买，点击"购买"调转到buybook.html
+                       有书籍，不想要继续购买，调转到count.html去支付
+                       
+3.    设计一个购买书籍的界面
+                       
 private int totalCount;//总的购书数量
 private float totalPrice；//总价
 private BOOK book;
 private int count;//数量
 public book.getPrice(){}//小计
-
-
-2.分析交互页面
-add()
-update()
-delete()
-clear()
 
 //向购物车中添加书，书→book 购物车→cart
   public void add(Book book ,Cart cart);
@@ -37,17 +45,12 @@ public CartItem(Book book, int count) {
            this.count = count;
      }
 
-
-
 public Book getBook() {
            return book ;
      }
-
-
 public int getCount() {
            return count ;
      }
-     
      
       // 得到小计
 public float getItemPrice() {
@@ -65,13 +68,10 @@ gouwuCart cart=new gouwuCart();
         Book p6=new Book(101,"计算机网络书","学生书籍",45); //测试买两件书籍的情况 
       
       
-   booklist.html
-        进入我的购物车之后有两种可能：购物车中有书、没有书
-        
-   没有书：则显示没有书并跳转到购书页面（需要经过BookClientServlet）
-     <c:when test="${empty CART || empty CART.map}">
-     购物车中没有一本书, 立即去 <a href="client/BookClientServlet?method=getPageInCondition" >购物 </a>                
-   </c:when>
+  4.count.html支付结算
+     第一部分   确认顾客姓名/手机号码/送货地址
+     第二部分   支付方式 网银/支付宝/微信
+   5. exit.html 退出界面   订单提交成功！请耐心等待发货
         
         
         
