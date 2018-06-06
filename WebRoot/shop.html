@@ -28,14 +28,14 @@
                          
         <c:forEach items="${CART.map}" var="entry">  
                             <tr>  
-                                <td></td>  
-                                <td></td>  
+              <td><input type="text" required="required" placeholder="书名"/></td>  
+<td><input type="text" required="required" placeholder="单价"/></td>   
                                 <td>  
                                     <button class="decrease" ${entry.value.count<=1 ? 'disabled="false"' : ''}>-</button>  
                                     <input id="${entry.key}" class="count" type="text" value="" style="width: 30px;"/>  
                                     <button class="increase">+</button>  
                                 </td>  
-                                <td></td>  
+                               <td><input type="text" required="required" placeholder="小计"/></td>  
                                 <td><input type="reset" value="删除" /></td> 
                             </tr>                       
                         </c:forEach>  
